@@ -1,14 +1,16 @@
 # Application
-web/app/plugins/*
-!web/app/plugins/.gitkeep
-web/app/mu-plugins/*/
-web/app/upgrade
-web/app/uploads/*
-!web/app/uploads/.gitkeep
+public/app/mu-plugins/*/
+public/app/upgrade
+public/app/uploads/*
+!public/app/uploads/.gitkeep
+public/app/cache/*
+public/app/wp-cache-config.php
+public/app/advanced-cache.php
+public/app/db.php
 
 # WordPress
-web/wp
-web/.htaccess
+public/wp
+public/.htaccess
 
 # Dotenv
 .env
