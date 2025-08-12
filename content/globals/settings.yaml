@@ -1,0 +1,19 @@
+title: Settings
+data:
+  site_name: Creo
+  social:
+    -
+      id: JF6JL6cw
+      name: Twitter
+      url: 'https://twitter.com/bstrahija'
+      icon: site/social-icons/twitter.svg
+    -
+      id: MbvNwxtz
+      name: Github
+      url: 'https://github.com/bstrahija'
+      icon: site/social-icons/github.svg
+    -
+      id: jFXancQD
+      name: Email
+      url: 'mailto:bstrahija@gmail.com'
+      icon: site/social-icons/email.svg

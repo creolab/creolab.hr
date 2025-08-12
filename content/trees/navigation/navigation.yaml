@@ -1,0 +1,21 @@
+tree:
+  -
+    id: 1d4de4f9-af1b-4228-90d8-5b3b76121e5f
+    title: About
+    url: /about
+  -
+    id: 4b011dcf-3732-4e11-baf5-581c7f204878
+    title: Blog
+    url: /articles
+  -
+    id: 7a415f12-66f7-4dcb-afbf-9aa0271b0b9c
+    title: Projects
+    url: /projects
+  -
+    id: 58baa634-11f8-475b-b39a-5398fe6def7f
+    title: Photography
+    url: /photography
+  -
+    id: 2f080670-112d-482b-b16c-57d1a9bf1411
+    title: Contact
+    url: 'https://bstrahija.typeform.com/to/btZ1aW?typeform-source=creolab.hr'

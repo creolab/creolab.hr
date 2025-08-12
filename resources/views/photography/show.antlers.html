@@ -1,0 +1,55 @@
+<div class="max-w-5xl mx-auto relative mt-16 content">
+    {{ svg src="/assets/site/scratches" class="absolute text-gray-800 mt-8 top-0
+    left-0 w-20 hidden md:block" }}
+    <article class="lg:py-32 max-w-2xl mx-auto">
+        <h1>{{ title }}</h1>
+        <div
+            class="bg-gray-800 inline-block text-sm mb-16 pr-4 pl-16 -ml-16 uppercase tracking-widest text-white py-1 rounded-r-full"
+        >
+            Published {{ if topics }} in {{ topics }}<a
+                href="{{ url }}"
+                class="text-teal-light no-underline hover:text-white"
+                >{{ title }}</a
+            >{{ unless last }}, {{ /unless }}{{ /topics }} {{ /if }} on {{ date
+            format="M j, Y" }}
+        </div>
+        <div class="content">
+            {{ content | widont }}...
+
+            <ul class="gallery">
+                {{ gallery }} {{ image }}
+                <li>
+                    <a href="{{ url }}" target="_blank"
+                        ><img src="{{ glide src="{{ url }}" width="640"
+                        height="640" }}" alt="{{ alt }}" /></a
+                    >
+                </li>
+                {{ /image }} {{ /gallery }}
+            </ul>
+        </div>
+    </article>
+</div>
+
+<style>
+    .content ul.gallery {
+        list-style-type: none;
+        margin: 0 0 2rem 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+    }
+
+    .content ul.gallery li {
+        margin: 0;
+        padding: 0;
+        aspect-ratio: 1/1;
+    }
+
+    .content ul.gallery li img {
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        min-width: 100%;
+        min-height: 100%;
+    }
+</style>

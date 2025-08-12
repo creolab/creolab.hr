@@ -1,0 +1,15 @@
+title: Gallery
+fields:
+  -
+    handle: gallery
+    field:
+      mode: stacked
+      type: grid
+      display: Gallery
+      fields:
+        -
+          handle: image
+          field:
+            container: assets
+            type: assets
+            display: Image
