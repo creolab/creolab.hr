@@ -1,71 +1,69 @@
-<!-- statamic:hide --><p align="center"><img src="https://statamic.com/assets/branding/Statamic-Logo-Rad.png" width="100" alt="Statamic Logo" /></p>
-<h1 align="center">
-  Statamic Starter Kit: Cool Writings
-</h1>
+# 🎸 Hey there! Welcome to my digital playground
 
-![Statamic 4+](https://img.shields.io/badge/Statamic-4+-FF269E?style=for-the-badge&link=https://statamic.com)
-<!-- /statamic:hide -->
+I'm a web developer with 20+ years of battle scars and countless late-night debugging sessions under my belt. This is my personal portfolio – built with love, Laravel, and probably too much enthusiasm.
 
-## Features
-- Articles blogging collection with most recent articles on the home page
-- Markdown focused writing experience
-- Topics taxonomy for Articles
-- Pages structure for dynamic navigation
-- Customizable social links and icons
-- Clean & modern typography using [Inter](https://rsms.me/inter/)
-- Beautifully responsive
-- Built with [TailwindCSS](https://tailwindcss.com)
-- Itty bitty [Alpine.js](https://github.com/alpinejs/alpine) for interactions
-- 💯/💯/💯/💯 Lighthouse score
+## 🤘 What's This All About?
 
-<!-- statamic:hide -->
-## Screenshot
+This site is where I showcase my work, share random thoughts about web development, and occasionally post photos that I think are cooler than they actually are. Think of it as my digital business card, but with more personality and way better syntax highlighting.
 
-![Screenshot](https://github.com/statamic/statamic-starter-cool-writings/raw/master/screenshot.png)
-<!-- /statamic:hide -->
+## 🛠️ Built With The Good Stuff
 
-## Video Tour
+**Backend Magic:**
 
-Watch the [Cool Writings video tour](https://www.youtube.com/watch?v=IgjJYfVF26Q) to see what's going on under the hood.
+- **PHP 8.4** - Because life's too short for old PHP
+- **Laravel 12** - The framework that makes PHP feel like poetry
+- **Statamic CMS 5** - For when WordPress feels too mainstream
+- **Composer** - Keeping dependencies in line since forever
 
-## Quick Start
+**Frontend Wizardry:**
 
-### 1. Create a new site
+- **Vite** - Lightning-fast builds (faster than my drum solos)
+- **TailwindCSS** - Making CSS fun again
+- **Alpine.js** - Vue's little sibling that packs a punch
+- **PostCSS** - Because vanilla CSS is for vanilla people
 
-You can create a new site using the [Statamic CLI Tool](https://github.com/statamic/cli):
+**Content & Fun:**
 
-```
-statamic new your-site statamic/starter-kit-cool-writings
-```
+- **Markdown** - Writing like a developer should
 
-Or you can install manually into a fresh [Statamic installation](https://statamic.dev/installation) by running:
+## 🎯 What I Do (When I'm Not Playing Drums)
 
-```
-php please starter-kit:install statamic/starter-kit-cool-writings --clear-site
-```
+I've been slinging code for over two decades, specializing in:
 
-### 2. Make a new user
+- **PHP Development** (Laravel, WordPress) - Making servers happy since the early 2000s
+- **JavaScript Frameworks** (Vue, React, Svelte) - Because vanilla JS is so last century
+- **Full-Stack Solutions** - From database to design, I've got you covered
+- **Photography** - Capturing moments between debugging sessions
 
-The above installers should prompt you to make a user, but you can also run `php please make:user`. You'll want it to be a `super` so you have access to everything.
+## 🥁 Life Outside The Terminal
 
-### 3. Recompile the CSS (optional)
+When I'm not staring at code, you'll find me:
 
-The [TailwindCSS](https://tailwindcss.com/) included in this kit is compiled and purged to reduce filesize on any unused classes and selectors. If you want to modify anything, just recompile it.
+- **Playing drums** for two bands: [Dead Dog Summer](https://www.facebook.com/deaddogsummer) and [Youth Against](https://www.facebook.com/youthagainstck) 🥁
+- **Smashing squash balls** (the sport, not the vegetable) 🏸
+- **Taking photos** of things that catch my eye 📸
+- **Keeping up with** the latest JavaScript framework that came out 5 minutes ago (they multiply faster than bugs)
 
-```
-npm i && npm run dev
-```
+## 🐛 Found A Bug?
 
-To compile for production again:
+If you spot something broken, weird, or just plain wrong, feel free to:
+- Open an issue
+- Send me a message
+- Fix it yourself and send a PR (you legend!)
 
-```
-npm run build
-```
+## 📫 Let's Connect
 
-### 4. Do your thing!
+- **Website**: [creolab.hr](https://creolab.hr)
+- **Email**: bstrahija@gmail.com
+- **LinkedIn**: [linkedin.com/in/strahija](https://linkedin.com/in/strahija)
+- **Twitter**: [@bstrahija](https://twitter.com/bstrahija)
 
-If you're using [Laravel Valet](https://laravel.com/docs/valet) (or similar), your site should be available at `http://cool-site.test`. You can access the control panel at `http://cool-site.test/cp` and login with your new user. Open up the source code, follow along with the [Statamic docs](https://statamic.dev), and enjoy!
+## 📝 License
 
-## Contributing
+This project is open source and available under the [MIT License](LICENSE). Feel free to fork, modify, and make it your own. Just don't blame me if it breaks your computer. 😉
 
-Contributions are always welcome, no matter how large or small. Before contributing, please read the [code of conduct](https://github.com/statamic/cms/wiki/Code-of-Conduct).
+---
+
+*Built with ❤️, 🎵, and an unhealthy obsession with clean code*
+
+**P.S.** If you're still reading this, you're either really interested in my work or you're procrastinating. Either way, thanks for stopping by! 🎉
