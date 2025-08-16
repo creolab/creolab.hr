@@ -11,10 +11,12 @@ export default defineConfig({
         viteStaticCopy({
             targets: [
                 {
-                    src: "resources/icons/*",
+                    src: "resources/icons/*.{png,ico,svg,webmanifest}",
                     dest: "icons",
+                    flatten: true,
                 },
             ],
+            structured: false,
         }),
     ],
 });
