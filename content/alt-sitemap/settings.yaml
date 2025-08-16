@@ -1,0 +1,35 @@
+default_collection_priorities:
+  -
+    id: mee28svl
+    collection: articles
+    priority: 1.0
+    type: collection_priority
+    enabled: true
+  -
+    id: mee28z3z
+    collection: pages
+    priority: 0.5
+    type: collection_priority
+    enabled: true
+  -
+    id: mee296sm
+    collection: projects
+    priority: 0.8
+    type: collection_priority
+    enabled: true
+  -
+    id: mee29caa
+    collection: photography
+    priority: 0.2
+    type: collection_priority
+    enabled: true
+exclude_collections_from_sitemap: null
+default_taxonomy_priorities:
+  -
+    id: mee29hfj
+    taxonomy:
+      - topics
+    priority: 1.0
+    type: taxonomy_priority
+    enabled: true
+exclude_taxonomies_from_sitemap: null

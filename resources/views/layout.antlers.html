@@ -4,7 +4,9 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{{ title }} — {{ settings:site_name }}</title>
+
+        {{ alt_seo:meta }}
+
         <meta name="description" content="{{ excerpt ?? title }}" />
         <meta name="theme-color" content="00908F" />
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
@@ -16,5 +18,7 @@
         {{ partial:nav }} {{ template_content }} {{ partial:footer }}
 
         <style></style>
+
+        <!-- {{ AltCookies:Toast }} -->
     </body>
 </html>
