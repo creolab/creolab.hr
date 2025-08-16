@@ -5,11 +5,11 @@ tree:
     url: /about
   -
     id: 4b011dcf-3732-4e11-baf5-581c7f204878
-    title: Blog
+    title: Writing
     url: /articles
   -
     id: 7a415f12-66f7-4dcb-afbf-9aa0271b0b9c
-    title: Projects
+    title: Portfolio
     url: /projects
   -
     id: 58baa634-11f8-475b-b39a-5398fe6def7f
