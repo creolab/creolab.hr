@@ -1,0 +1,6 @@
+from: /blog/topics/laravel
+to: /articles
+redirect_type: '301'
+sites:
+  - default
+id: 68a26383c8bf0

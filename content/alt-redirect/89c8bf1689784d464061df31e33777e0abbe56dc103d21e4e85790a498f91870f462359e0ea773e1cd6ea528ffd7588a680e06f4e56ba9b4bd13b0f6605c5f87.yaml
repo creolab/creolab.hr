@@ -1,0 +1,6 @@
+from: /blog/removing-the-public-segment-in-a-laravel-4-app
+to: /removing-the-public-segment-in-a-laravel-4-app
+redirect_type: '301'
+sites:
+  - default
+id: 68a263689165c

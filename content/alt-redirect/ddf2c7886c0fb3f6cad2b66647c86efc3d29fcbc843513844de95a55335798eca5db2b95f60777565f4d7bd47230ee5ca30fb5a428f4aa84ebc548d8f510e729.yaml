@@ -1,0 +1,6 @@
+from: /blog
+to: /articles
+redirect_type: '301'
+sites:
+  - default
+id: 68a261e674736

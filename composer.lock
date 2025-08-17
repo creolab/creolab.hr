@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "754fa5e1d828a857b5e92fa2da020a65",
+    "content-hash": "f8a0682bd384ebbcd81ccbddbc30ff23",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -110,6 +110,52 @@
                 "source": "https://github.com/alt-design/Alt-Cookies-Addon/tree/v1.1.7"
             },
             "time": "2024-09-17T13:24:10+00:00"
+        },
+        {
+            "name": "alt-design/alt-redirect",
+            "version": "v1.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alt-design/Alt-Redirect-Addon.git",
+                "reference": "451c5157972a3bfde12cda552efce062cf1b5b5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alt-design/Alt-Redirect-Addon/zipball/451c5157972a3bfde12cda552efce062cf1b5b5c",
+                "reference": "451c5157972a3bfde12cda552efce062cf1b5b5c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "statamic/cms": "^4.0|^5.17.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AltDesign\\AltRedirect\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "Alt Redirect",
+                    "description": "Alt Redirect addon"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AltDesign\\AltRedirect\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Alt Redirect addon, add Redirects to your site",
+            "support": {
+                "issues": "https://github.com/alt-design/Alt-Redirect-Addon/issues",
+                "source": "https://github.com/alt-design/Alt-Redirect-Addon/tree/v1.6.3"
+            },
+            "time": "2025-03-15T09:20:50+00:00"
         },
         {
             "name": "alt-design/alt-seo",

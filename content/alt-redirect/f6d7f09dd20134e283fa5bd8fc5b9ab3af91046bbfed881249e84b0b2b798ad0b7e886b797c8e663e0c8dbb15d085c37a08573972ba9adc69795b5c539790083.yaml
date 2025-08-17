@@ -1,0 +1,6 @@
+from: /2013/05/modules-in-laravel-4
+to: /articles
+redirect_type: '301'
+sites:
+  - default
+id: 68a261dc2de3f

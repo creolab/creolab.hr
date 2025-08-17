@@ -1,0 +1,6 @@
+from: /blog/laravel-5-5-on-shared-hosting
+to: /laravel-55-on-shared-hosting
+redirect_type: '301'
+sites:
+  - default
+id: 68a263560c36a
