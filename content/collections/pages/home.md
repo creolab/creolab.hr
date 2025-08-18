@@ -5,10 +5,11 @@ title: Home
 template: home
 subtitle: 'Creo | Boris Strahija'
 updated_by: f63eaccf-f416-499c-a19c-3fbfec4e4c77
-updated_at: 1755477009
+updated_at: 1755561009
 alt_seo_noindex: false
 alt_seo_nofollow: false
 exclude_from_sitemap: false
+alt_seo_social_image: creo_twitter.jpg
 ---
 # Hi, I'm Boris 
 
