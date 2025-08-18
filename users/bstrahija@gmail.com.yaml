@@ -2,3 +2,7 @@ name: 'Boris Strahija'
 super: true
 id: f63eaccf-f416-499c-a19c-3fbfec4e4c77
 password_hash: $2y$12$JGZZT1yWURedISGwypmL..7R5ey1iQdI.4sY7Zpb5FDziCxmpBw0i
+preferences:
+  collections:
+    articles:
+      after_save: continue_editing
