@@ -1,37 +1,37 @@
-<div class="max-w-5xl mx-auto relative mt-16">
-    {{ svg src="/assets/site/scratches" class="absolute text-gray-800 mt-8 top-0 left-0 w-20 hidden md:block" }}
-    <article class="py-32 max-w-2xl mx-auto">
-        <header class="content mb-16">
-            <h1>{{ title }}</h1>
-            {{ content | widont }}
-        </header>
+<section class="py-10 md:py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div class="container max-w-screen-xl mx-auto px-4">
+        <article class="max-w-2xl mx-auto">
+            <header class="content mb-16">
+                <h2 class="font-medium text-gray-700 dark:text-gray-200 text-3xl md:text-4xl mb-20">{{ title }}</h2>
+            </header>
 
-        {{ collection:photography as="gallery" paginate="10" }}
-        {{ if no_results }}
-        <h2 class="text-3xl italic tracking-tight">Feel the rhythm! Feel the rhyme! Get on up, it's writing time! Cool
-            writings!</h2>
-        {{ /if }}
+            {{ collection:photography as="gallery" paginate="10" }}
+                {{ if no_results }}
+                    <h2 class="text-3xl italic tracking-tight">Feel the rhythm! Feel the rhyme! Get on up, it's writing time! Cool
+                        writings!</h2>
+                {{ /if }}
 
-        {{ gallery }}
-        <div class="mb-2">
-            <a href="{{ url }}" class="text-lg hover:text-teal tracking-tight leading-tight font-bold">
-                {{ title | widont }}
-            </a>
-        </div>
-        {{ /gallery }}
+                {{ gallery }}
+                <div class="mb-2">
+                    <a href="{{ url }}" class="text-lg hover:text-teal tracking-tight leading-tight font-bold text-gray-600 dark:text-gray-400">
+                        {{ title | widont }}
+                    </a>
+                </div>
+                {{ /gallery }}
 
-        {{ paginate }}
-        {{ if prev_page || next_page }}
-        <div class="flex justify-between text-xl -mx-16 pt-16 font-bold">
-            <a href="{{ prev_page }}" class="{{ ! prev_page ?= 'opacity-25' }}">
-                &larr; Back to the future
-            </a>
-            <a href="{{ next_page }}">
-                Forward to the past &rarr;
-            </a>
-        </div>
-        {{ /if }}
-        {{ /paginate }}
-        {{ /collection:photography }}
-    </article>
+                {{ paginate }}
+                    {{ if prev_page || next_page }}
+                        <div class="flex justify-between text-xl -mx-16 pt-16 font-bold">
+                            <a href="{{ prev_page }}" class="{{ ! prev_page ?= 'opacity-25' }}">
+                                &larr; Back to the future
+                            </a>
+                            <a href="{{ next_page }}">
+                                Forward to the past &rarr;
+                            </a>
+                        </div>
+                    {{ /if }}
+                {{ /paginate }}
+            {{ /collection:photography }}
+        </article>
+    </div>
 </div>

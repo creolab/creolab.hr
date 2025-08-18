@@ -20,9 +20,9 @@
                 <a href="/projects" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium transition-colors duration-200">
                     Projects
                 </a>
-                <a href="/photography" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium transition-colors duration-200">
+                <!-- <a href="/photography" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium transition-colors duration-200">
                     Photo
-                </a>
+                </a> -->
                 <a href="/articles" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium transition-colors duration-200">
                     Blog
                 </a>
@@ -76,9 +76,9 @@
                 <a href="/projects" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-medium rounded-md transition-all duration-200">
                     Projects
                 </a>
-                <a href="/photography" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-medium rounded-md transition-all duration-200">
+                <!-- <a href="/photography" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-medium rounded-md transition-all duration-200">
                     Photo
-                </a>
+                </a> -->
                 <a href="/articles" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-medium rounded-md transition-all duration-200">
                     Blog
                 </a>
@@ -92,17 +92,6 @@
         // Dark mode functionality
         const darkModeToggle = document.getElementById('darkModeToggle');
         const htmlElement = document.documentElement;
-
-        // Check for saved theme preference or default to 'light'
-        const currentTheme = localStorage.getItem('theme') ||
-            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-        // Apply the current theme
-        if (currentTheme === 'dark') {
-            htmlElement.classList.add('dark');
-        } else {
-            htmlElement.classList.remove('dark');
-        }
 
         // Dark mode toggle event
         darkModeToggle.addEventListener('click', function() {

@@ -1,7 +1,10 @@
-<div class="max-w-5xl mx-auto relative mt-16 content">
-    {{ svg src="/assets/site/scratches" class="absolute text-gray-800 mt-8 top-0 left-0 w-20 hidden md:block" }}
-    <article class="py-32 max-w-2xl mx-auto content">
-        <h1>{{ title }}</h1>
-        {{ content | widont }}
-    </article>
+<section class="py-10 md:py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div class="container max-w-screen-xl mx-auto px-4">
+        <div class="max-w-5xl mx-auto relative mt-16 content">
+            <article class="content">
+                <h2 class="font-medium text-gray-700 dark:text-gray-200 text-4xl md:text-5xl mb-16">{{ title }}</h2>
+                {{ content | widont }}
+            </article>
+        </div>
+    </div>
 </div>
