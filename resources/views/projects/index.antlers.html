@@ -1,113 +1,142 @@
-<div class="max-w-5xl mx-auto relative mt-16">
-    {{ svg src="/assets/site/scratches" class="absolute text-gray-800 mt-8 top-0
-    left-0 w-20 hidden md:block" }}
-    <article class="py-32 max-w-2xl mx-auto">
-        <header class="content mb-16">
-            <h1>{{ title }}</h1>
-            {{ content | widont }}
-        </header>
+<section class="py-10 md:py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div class="container max-w-screen-xl mx-auto px-4">
+        <div class="flex flex-col lg:flex-row justify-between gap-20">
 
-        {{ collection:projects as="project" paginate="10" }} {{ if no_results }}
-        <h2 class="text-3xl italic tracking-tight">
-            Feel the rhythm! Feel the rhyme! Get on up, it's writing time! Cool
-            writings!
-        </h2>
-        {{ /if }} {{ project }}
-        <div class="mb-2">
-            <a
-                href="{{ url }}"
-                class="text-lg hover:text-teal tracking-tight leading-tight font-bold"
-            >
-                {{ title | widont }}
-            </a>
+            <div class="space-y-24">
+                {{ collection:projects paginate="10" as="projects" }}
+                    {{ if no_results }}
+                        <h2 class="text-3xl italic tracking-tight">Feel the rhythm! Feel the rhyme! Get on up, it's writing time! Cool writings!</h2>
+                    {{ /if }}
+
+                    {{ projects }}
+                        <div class="flex space-x-6">
+                            <div class="font-normal text-gray-700 dark:text-gray-300 text-xl md:text-2xl whitespace-nowrap">
+                                {{ gallery }}
+                                    {{ image }}
+                                        <div class="w-[320px] overflow-hidden">
+                                            <a
+                                                href="{{ url }}"
+                                                target="_blank"
+                                                class="block w-full h-full"
+                                            >
+                                                <img src="{{ glide src="{{ url }}" width="800"
+                                                height="600" }}" alt="{{ alt }}" class="w-full h-auto
+                                                object-cover hover:scale-105 transition-transform
+                                                duration-300" />
+                                            </a>
+                                        </div>
+                                    {{ /image }}
+                                {{ /gallery }}
+                            </div>
+
+                            <span class="w-32 h-0.5 bg-gray-300 dark:bg-gray-600 mt-5 transition-colors duration-300"></span>
+
+                            <div>
+                                <h1 class="font-normal text-gray-700 dark:text-gray-200 text-3xl md:text-4xl mb-5 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"><a href="{{ url }}">{{ title | widont }}</a></h1>
+
+                                <p class="font-normal text-gray-500 dark:text-gray-400 text-sm md:text-base">
+                                    {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
+                                </p>
+                            </div>
+                        </div>
+                    {{ /projects }}
+                {{ /collection:projects }}
+
+                {{ paginate }}
+                    {{ if prev_page || next_page }}
+                        <div class="flex justify-between text-xl -mx-16 pt-16 font-bold">
+                            <a href="{{ prev_page }}" class="{{ ! prev_page ?= 'opacity-25' }}">
+                                &larr; Back to the future
+                            </a>
+                            <a href="{{ next_page }}">
+                                Forward to the past &rarr;
+                            </a>
+                        </div>
+                    {{ /if }}
+                {{ /paginate }}
+
+                <hr class="" style="margin-top: 4rem; margin-bottom: 2rem" />
+
+                <div>
+                    <h2 class="text-3xl mb-10">
+                        Other Mentions <small>(Clients/Projects)</small>
+                    </h2>
+
+                    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-0">
+                        <li>Orbit.si</li>
+                        <li>Toyota Bačić</li>
+                        <li><a href="https://www.sempl.si/" target="_blank">SEMPL</a></li>
+                        <li>Giorgio Martini SI</li>
+                        <li>Istranova</li>
+                        <li><a href="https://rasayana.at">Rasayana</a></li>
+                        <li>Slovenia Break</li>
+                        <li>
+                            <a href="https://www.ogaecroatia.com" target="_blank"
+                                >OGAE Croatia</a
+                            >
+                        </li>
+                        <li>Falcon.si</li>
+                        <li><a href="https://mesap.hr">Mesap</a></li>
+                        <li>
+                            <a href="https://td-sempeter.si/" target="_blank"
+                                >TD Šempeter</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://www.moderna-galerija.hr/" target="_blank"
+                                >Moderna Galerija</a
+                            >
+                        </li>
+                        <li>AICR</li>
+                        <li>Anan Promotion Catalog</li>
+                        <li>Eurocon</li>
+                        <li>Oxford Study</li>
+                        <li>LekaGape</li>
+                        <li>Gospodicna.si</li>
+                        <li>Mudra Kupovina.hr</li>
+                        <li>Uhvati Val.hr</li>
+                        <li>HubbaBubba.si</li>
+                        <li>Investimulation</li>
+                        <li>Spar Potovanja</li>
+                        <li>
+                            <a href="https://td-sempeter.si/" target="_blank"
+                                >TD Šempeter</a
+                            >
+                        </li>
+                        <li><a href="https://baggiz.hr" target="_blank">Baggiz</a></li>
+                        <li>Zunanja Oprema</li>
+                        <li>Eurovision Croatia</li>
+                        <li>Channel Advantage</li>
+                        <li>Anan Promotion</li>
+                        <li>Sex Livuy</li>
+                        <li>Anushka Salon</li>
+                        <li>Bepanthen</li>
+                        <li>Wordsmiths</li>
+                        <li>Basambilu</li>
+                        <li>Novi Krug</li>
+                        <li>
+                            <a href="https://innerwheel.hr/" target="_blank"
+                                >Inner Wheel Hrvatska</a
+                            >
+                        </li>
+                        <li>Juicy Fruit</li>
+                        <li>Nova TV Intranet Blog</li>
+                        <li>Urbana Oprema</li>
+                        <li>Sportspick Network</li>
+                        <li>MN Nekretnine</li>
+                        <li>Primawall</li>
+                        <li>Stanleybet</li>
+                        <li>DMSA</li>
+                        <li>Experta</li>
+                        <li>Eco Play</li>
+                        <li>Medex Test</li>
+                        <li>Cycan</li>
+                        <li>Snickers</li>
+                        <li>OMV</li>
+                        <li>BMW</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        {{ /project }} {{ paginate }} {{ if prev_page || next_page }}
-        <div class="flex justify-between text-xl -mx-16 pt-16 font-bold">
-            <a href="{{ prev_page }}" class="{{ ! prev_page ?= 'opacity-25' }}">
-                &larr; Back to the future
-            </a>
-            <a href="{{ next_page }}"> Forward to the past &rarr; </a>
-        </div>
-        {{ /if }} {{ /paginate }} {{ /collection:projects }}
-
-        <hr class="" style="margin-top: 4rem; margin-bottom: 2rem" />
-
-        <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 1rem">
-            Other Mentions <small>(Clients/Projects)</small>
-        </h2>
-
-        <ul>
-            <li>Orbit.si</li>
-            <li>Toyota Bačić</li>
-            <li><a href="https://www.sempl.si/" target="_blank">SEMPL</a></li>
-            <li>Giorgio Martini SI</li>
-            <li>Istranova</li>
-            <li><a href="https://rasayana.at">Rasayana</a></li>
-            <li>Slovenia Break</li>
-            <li>
-                <a href="https://www.ogaecroatia.com" target="_blank"
-                    >OGAE Croatia</a
-                >
-            </li>
-            <li>Falcon.si</li>
-            <li><a href="https://mesap.hr">Mesap</a></li>
-            <li>
-                <a href="https://td-sempeter.si/" target="_blank"
-                    >TD Šempeter</a
-                >
-            </li>
-            <li>
-                <a href="https://www.moderna-galerija.hr/" target="_blank"
-                    >Moderna Galerija</a
-                >
-            </li>
-            <li>AICR</li>
-            <li>Anan Promotion Catalog</li>
-            <li>Eurocon</li>
-            <li>Oxford Study</li>
-            <li>LekaGape</li>
-            <li>Gospodicna.si</li>
-            <li>Mudra Kupovina.hr</li>
-            <li>Uhvati Val.hr</li>
-            <li>HubbaBubba.si</li>
-            <li>Investimulation</li>
-            <li>Spar Potovanja</li>
-            <li>
-                <a href="https://td-sempeter.si/" target="_blank"
-                    >TD Šempeter</a
-                >
-            </li>
-            <li><a href="https://baggiz.hr" target="_blank">Baggiz</a></li>
-            <li>Zunanja Oprema</li>
-            <li>Eurovision Croatia</li>
-            <li>Channel Advantage</li>
-            <li>Anan Promotion</li>
-            <li>Sex Livuy</li>
-            <li>Anushka Salon</li>
-            <li>Bepanthen</li>
-            <li>Wordsmiths</li>
-            <li>Basambilu</li>
-            <li>Novi Krug</li>
-            <li>
-                <a href="https://innerwheel.hr/" target="_blank"
-                    >Inner Wheel Hrvatska</a
-                >
-            </li>
-            <li>Juicy Fruit</li>
-            <li>Nova TV Intranet Blog</li>
-            <li>Urbana Oprema</li>
-            <li>Sportspick Network</li>
-            <li>MN Nekretnine</li>
-            <li>Primawall</li>
-            <li>Stanleybet</li>
-            <li>DMSA</li>
-            <li>Experta</li>
-            <li>Eco Play</li>
-            <li>Medex Test</li>
-            <li>Cycan</li>
-            <li>Snickers</li>
-            <li>OMV</li>
-            <li>BMW</li>
-        </ul>
-    </article>
-</div>
+    </div>
+</section>

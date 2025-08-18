@@ -1,22 +1,31 @@
-<div class="max-w-5xl mx-auto relative mt-16 content">
-    {{ svg src="/assets/site/scratches" class="absolute text-gray-800 mt-8 top-0 left-0 w-20 hidden md:block" }}
-    <article class="lg:py-32 max-w-2xl mx-auto">
-        {{ if featured_image }}
-            <img src="{{ featured_image }}" alt="{{ title }}" class="w-full h-auto mb-8">
-        {{ /if}}
+<section class="py-10 md:py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div class="container max-w-screen-xl mx-auto px-4">
+        <article class="mb-16 sm:mb-24 content">
+            <header class="mb-8">
+                <h1 class="text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight">{{ title }}</h1>
+                <div class="mt-4 text-sm">
+                    {{ date }}
+                </div>
+            </header>
+            <div class="max-w-none prose sm:prose-lg content">
+                {{ content | widont }}
+            </div>
+            <div class="mt-8 flex flex-wrap items-center gap-6 text-sm justify-between sm:mt-12 sm:text-base">
+                <div class="flex flex-wrap gap-x-5 gap-y-1 text-sm">
 
-        <h1>{{ title }}</h1>
-        <div class="bg-gray-800 inline-block text-sm mb-16 pr-4 pl-16 -ml-16 uppercase tracking-widest text-white py-1 rounded-r-full">
-            Published
-            {{ if topics }}
-                in {{ topics }}<a href="{{ url }}" class="text-teal-light no-underline hover:text-white">{{ title }}</a>{{ unless last }}, {{ /unless }}{{ /topics }}
-            {{ /if }}
-            on {{ date format="M j, Y" }}
-        </div>
-        <div class="content">
-            {{ content | widont }}
-        </div>
-    </article>
+                    {{ if topics }}
+                        in
+                        {{ topics }}
+                            <a class="text-main hover:underline" href="{{ url }}">
+                                {{ title }}
+                            </a>
+                        {{ /topics }}
+                    {{ /if }}
+                </div>
+
+            </div>
+        </article>
+    </div>
 </div>
 
 <style>
