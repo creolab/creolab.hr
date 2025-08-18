@@ -17,15 +17,57 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/build/icons/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="Creo" />
         <link rel="manifest" href="/build/icons/site.webmanifest" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
-    <body
-        class="bg-white font-sans leading-normal text-grey-800 px-4 sm:px-10"
-        x-data="{ showMobileNav: false }"
-    >
-        {{ partial:nav }} {{ template_content }} {{ partial:footer }}
+    <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans leading-relaxed transition-colors duration-300">
+        {{ partial:partials.nav }}
 
-        <style></style>
+        <main class="min-h-screen">
+            {{ template_content }}
+        </main>
 
-        <!-- {{ AltCookies:Toast }} -->
+        {{ partial:partials.footer }}
+
+        <style>
+            /* Smooth scrolling */
+            html {
+                scroll-behavior: smooth;
+            }
+
+            /* Custom scrollbar */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: rgb(243 244 246);
+            }
+
+            .dark ::-webkit-scrollbar-track {
+                background: rgb(31 41 55);
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: rgb(156 163 175);
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: rgb(107 114 128);
+            }
+
+            .dark ::-webkit-scrollbar-thumb {
+                background: rgb(75 85 99);
+            }
+
+            .dark ::-webkit-scrollbar-thumb:hover {
+                background: rgb(107 114 128);
+            }
+        </style>
+
+        <script>
+            feather.replace()
+        </script>
     </body>
 </html>

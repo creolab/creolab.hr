@@ -1,4 +1,26 @@
 @import "tailwindcss/base";
-@import "style";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+/* Custom styles here */
+body {
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+input,
+textare,
+a {
+    font-family: "Poppins", sans-serif;
+}

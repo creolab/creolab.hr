@@ -1,0 +1,43 @@
+
+<section class="py-10 md:py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div class="container max-w-screen-xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {{ collection:projects limit="3" as="projects" }}
+
+                {{ if no_results }}
+                    <h2 class="text-3xl italic tracking-tight">Feel the rhythm! Feel the rhyme! Get on up, it's writing time! Cool writings!</h2>
+                {{ /if }}
+
+                {{ projects scope="project" }}
+                    <div class="bg-gray-50 dark:bg-gray-800 px-8 py-10 rounded-md transition-colors duration-300">
+                        <div class="w-full py-6 flex justify-center bg-gray-100 dark:bg-gray-700 rounded-md mb-4 transition-colors duration-300">
+                            {{ gallery }}
+                                {{ image }}
+                                    <div class="w-full overflow-hidden">
+                                        <a
+                                            href="{{ project:url }}"
+                                            target="_blank"
+                                            class="block w-full h-full"
+                                        >
+                                            <img src="{{ glide src="{{ url }}" width="800"
+                                            height="600" }}" alt="{{ alt }}" class="w-full h-auto
+                                            object-cover hover:scale-105 transition-transform
+                                            duration-300" />
+                                            {{ parent:url }}
+                                        </a>
+                                    </div>
+                                {{ /image }}
+                            {{ /gallery }}
+                        </div>
+
+                        <h4 class="font-medium text-gray-700 dark:text-gray-200 text-lg mb-4 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"><a href="{{ url }}">{{ title | widont }}</a></h4>
+
+                        <p class="font-normal text-gray-500 dark:text-gray-400 text-md">
+                            {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
+                        </p>
+                    </div>
+                {{ /projects }}
+            {{ /collection:projects }}
+        </div>
+    </div>
+</section>
