@@ -3,8 +3,16 @@ id: dce4f1d9-12d2-46a5-9d12-980a28867036
 blueprint: project
 title: 'Human Rights Film Festival'
 updated_by: f63eaccf-f416-499c-a19c-3fbfec4e4c77
-updated_at: 1754569610
+updated_at: 1755526162
 website: 'https://www.humanrightsfestival.org/'
+gallery:
+  -
+    id: meh6y1zl
+    image:
+      - cleanshot-2025-08-18-at-16.07.59.jpg
+alt_seo_noindex: false
+alt_seo_nofollow: false
+exclude_from_sitemap: false
 ---
 Description: Human Rights Film Festival in Zagreb.
 

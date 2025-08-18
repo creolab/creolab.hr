@@ -10,15 +10,14 @@
                         <h2 class="text-3xl italic tracking-tight">Feel the rhythm! Feel the rhyme! Get on up, it's writing time! Cool writings!</h2>
                     {{ /if }}
 
-                    {{ projects }}
+                    {{ projects scope="project" }}
                         <div class="flex space-x-6">
                             <div class="font-normal text-gray-700 dark:text-gray-300 text-xl md:text-2xl whitespace-nowrap">
                                 {{ gallery }}
                                     {{ image }}
                                         <div class="w-[320px] overflow-hidden">
                                             <a
-                                                href="{{ url }}"
-                                                target="_blank"
+                                                href="{{ project:url }}"
                                                 class="block w-full h-full"
                                             >
                                                 <img src="{{ glide src="{{ url }}" width="800"
@@ -34,7 +33,7 @@
                             <span class="w-32 h-0.5 bg-gray-300 dark:bg-gray-600 mt-5 transition-colors duration-300"></span>
 
                             <div>
-                                <h1 class="font-normal text-gray-700 dark:text-gray-200 text-3xl md:text-4xl mb-5 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"><a href="{{ url }}">{{ title | widont }}</a></h1>
+                                <h1 class="font-normal text-gray-700 dark:text-gray-200 text-3xl md:text-4xl mb-5 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"><a href="{{ project:url }}">{{ title | widont }}</a></h1>
 
                                 <p class="font-normal text-gray-500 dark:text-gray-400 text-sm md:text-base">
                                     {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
